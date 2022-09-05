@@ -1,38 +1,242 @@
-.App {
-  text-align: center;
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.mainContainer{
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(103, 101, 97);
+    display: flex;
+}
+.searchContainer{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.search{
+    display: flex;
+    flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search input{
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 60%;
+    font-size: 1.5rem;
+    border: navajowhite;
+    border-radius: 5px;
+    outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.box-1 { 
+    background-color: #3C3C3C; 
+    color: white;
+}
+.btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    font-size: 1.3rem;
+
   }
+
+
+
+  .btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+  
+
+  .imgMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  
+  }
+  .imgMain a{
+    color: lime;
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+
+  
+.imagesContainer{
+    columns: 3;
+    column-gap:5px;
+    width:80%;
+    margin: 2px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.imagesContainer img{
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    box-shadow: 1px 1px 5px black;
+ }
+
+
+ /* ///// */
+ @import url('https://fonts.googleapis.com/css?family=Cairo');
+body {
+  background-color: #010;
+}
+
+.title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  letter-spacing: 1px;
+  line-height:36px;
+  z-index: 1;
+  width: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-shadow: 1px 1px 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+@media screen and (max-width:870px) {
+    .mainContainer{
+        height: 15vh;
+    }
+
+    .search input{
+        line-height: 30px;
+        height: 40px;
+        width: 50%;
+        font-size: 1.2rem;
+        border-radius: 5px 0px 0px 5px;
+    }
+    .searchContainer {
+        justify-content: space-evenly;
+      }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px;
+        height: 40px;
+        width: 20%px;
+        font-size: 1.2rem;
+        border-radius: 0px 5px 5px 0px;
+      }
+    h1{
+  font-size: 25px;
+  margin-left: 28px;
+
+    }
+}
+
+
+
+@media screen and (max-width:870px) {
+    .searchContainer {
+        flex-direction: column;
+      }
+    h1{
+        font-size: 28px;
+        margin-left: 28px;
+          }
+    .search{
+        justify-content: end;
+    }
+    .search input{
+        line-height: 20px;
+        height: 30px;
+        width: 60%;
+        font-size: 1.1rem;
+        margin-bottom: 2%;
+    }
+    .btn {
+        line-height: 30px;
+        height: 30px;
+        width: 10%px;
+        font-size: 1.1rem;
+      }
+}
+
+
+@media screen and (max-width:870px) {
+  .imagesContainer {
+    columns: 2;
+  
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:400px) {
+  .imagesContainer {
+    columns: 1;
+  
   }
 }
